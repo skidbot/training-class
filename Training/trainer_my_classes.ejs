@@ -1,0 +1,7 @@
+<h1>My Classes</h1>
+<ul>
+  <% classes.forEach(cls => { %>
+    <li><%= cls.name %>: <%= cls.description %></li>
+  <% }); %>
+</ul>
+<a href="/trainer/create-class">Create New Class</a> | <a href="/logout">Logout</a>

@@ -1,0 +1,13 @@
+<h1>Available Classes</h1>
+<ul>
+  <% classes.forEach(cls => { %>
+    <li>
+      <%= cls.name %> - <%= cls.description %>
+      <form action="/client/signup" method="POST" style="display:inline;">
+        <input type="hidden" name="classId" value="<%= cls.id %>">
+        <button type="submit">Sign Up</button>
+      </form>
+    </li>
+  <% }); %>
+</ul>
+<a href="/client/my-classes">My Classes</a> | <a href="/logout">Logout</a>
